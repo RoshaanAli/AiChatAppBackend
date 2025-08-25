@@ -61,45 +61,12 @@ The server will start on the port specified in your `.env` file (e.g., `http://l
 
 The following are the primary endpoints available in this API.
 
-|
 
-Method
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/`      | Checks if the API is running and returns a welcome message. |
+| `POST` | `/chat`  | Sends a message to the AI service and returns a response. Expects a JSON body with a `message` string. |
 
- |
-
-Endpoint
-
- |
-
-Description
-
- |
-|
-
-`GET`
-
- |
-
-`/`
-
- |
-
-Checks if the API is running and returns a welcome message.
-
- |
-|
-
-`POST`
-
- |
-
-`/chat`
-
- |
-
-Sends a message to the AI service and returns a response. Expects a JSON body with a `message` string.
-
- |
 
 ### `/chat` Endpoint Request Body
 
@@ -119,29 +86,7 @@ The `POST` request to the `/chat` endpoint should include a JSON body with a sin
 
 This project uses the `dotenv` library to manage environment variables. All variables listed below should be defined in your `.env` file.
 
-|
+| Variable | Description                     | Default Value |
+|----------|---------------------------------|---------------|
+| `PORT`   | The port the server will run on. | `3000`        |
 
-Variable
-
- |
-
-Description
-
- |
-
-Default Value
-
- |
-|
-
-`PORT`
-
- |
-
-The port the server will run on.
-
- |
-
-`3000`
-
- |
